@@ -1,0 +1,44 @@
+
+index = 1
+
+while (index < $argc)
+
+value = $argv[index]
+
+index = index + 1
+
+Open(value)
+
+a = GetOS2Value('WinAscent')
+d = GetOS2Value('WinDescent')
+
+Print()
+
+Print(GetOS2Value('HHeadAscent'))
+Print(GetOS2Value('HHeadDescent'))
+Print(GetOS2Value('HHeadLineGap'))
+
+SetOS2Value('HHeadAscent', a)
+SetOS2Value('HHeadDescent', -d)
+SetOS2Value('HHeadLineGap', 0)
+
+Print()
+
+Print(GetOS2Value('TypoAscent'))
+Print(GetOS2Value('TypoDescent'))
+Print(GetOS2Value('TypoLineGap'))
+
+SetOS2Value('TypoAscent', a)
+SetOS2Value('TypoDescent', -d)
+SetOS2Value('TypoLineGap', 0)
+
+Print()
+
+Print(a)
+Print(d)
+
+Print()
+
+Generate('baseline-' + value:t)
+
+endloop

@@ -1,0 +1,38 @@
+
+index = 1
+
+while (index < $argc)
+
+value = $argv[index]
+
+index = index + 1
+
+Open(value)
+
+SelectAll()
+
+scale = 800 / 7.0
+
+Scale(scale)
+
+limit = 65014
+
+foreach
+
+if (0 < limit)
+
+limit = limit - 1
+
+Print(GlyphInfo('Width'))
+
+width = 1024
+
+SetWidth(width)
+
+endif
+
+endloop
+
+FontImage('image.png', [12, 'abcdefghijklmnopqrstuvwxyz'])
+
+endloop
