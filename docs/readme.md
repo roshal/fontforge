@@ -7,12 +7,16 @@ fontforge scripts for fonts
 
 https://fontforge.org/docs/scripting/scripting
 
+https://fontforge.org/docs/scripting/python
+
+https://fontforge.org/docs/scripting/python/fontforge
+
 ## examples
 
-```shell
+```sh
 fontforge -script baseline.pe *.ttf
 ```
 
-```shell
+```sh
 fontforge -script baseline.py *.ttf
 ```
